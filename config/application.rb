@@ -23,5 +23,8 @@ module Piazza
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+
+    # Load locale files from subdirectories
+    config.i18n.load_path += Rails.root.glob("config/locales/**/*.yml")
   end
 end
