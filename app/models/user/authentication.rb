@@ -6,7 +6,7 @@ module User::Authentication
 
     has_many :app_sessions
 
-    validates :password, length: { minimum: 8 }
+    validates :password, on: [ :create, :password_change ], length: { minimum: 8 }
   end
 
   class_methods do
